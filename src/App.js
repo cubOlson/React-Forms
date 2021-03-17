@@ -4,11 +4,20 @@ function App() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [staff, setStaff] = useState('student');
+  const [staff, setStaff] = useState('');
   const [bio, setBio] = useState('');
-  const [notifications, setNotifications] = useState()
+  const [notifications, setNotifications] = useState('');
   return (
-    <h1>Hello from App</h1>
+    <div>
+      <h1>Hello from App</h1>
+        <form>
+          <div>
+            <label htmlFor='name'>Name</label>
+            <input type='text' />
+          </div>
+        </form>
+
+    </div>
   );
 }
 
