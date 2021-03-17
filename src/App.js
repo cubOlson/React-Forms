@@ -30,10 +30,38 @@ function App() {
             type="tel"
             value={phoneNumber}
             />
-            <div>
-              <label htmlFor="staff">Staff</label>
-              
+            <div className='radio-buttons'>
+              <div>
+                <label htmlFor="student">Student</label>
+                <input 
+                type='radio'
+                value='student' 
+                checked={staff === 'student'}
+                onChange={(event)=> setStaff(event.target.value)}
+                />
+                <label htmlFor="staff">Staff</label>
+                <input 
+                type='radio'
+                value='instructor' 
+                checked={staff === 'instructor'}
+                onChange={(event)=> setStaff(event.target.value)}
+                />
+              </div>
             </div>
+            <label htmlFor='bio'>Bio</label>
+            <input 
+            style={{ padding: 30}}
+            onChange={(event)=> setBio(event.target.value)}
+            type='textarea' 
+            value={bio}
+            />
+            <label htmlFor='notifications'>Email Notifications</label>
+            <input 
+              type='checkbox'
+              value={notifications}
+              checked={notifications === 'true'}
+              onChange={(event)=> setNotifications(event.target.value)}
+            />
           </div>
         </form>
 
